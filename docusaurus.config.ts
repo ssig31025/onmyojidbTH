@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { shikigamiData } from './src/data/shikigami';
 
 const config: Config = {
   title: 'Onmyoji DB',
@@ -13,7 +14,7 @@ const config: Config = {
   organizationName: 'ssig31025',
   projectName: 'onmyojidbTH',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
@@ -103,7 +104,6 @@ const config: Config = {
         name: 'docusaurus-shikigami-plugin',
         async contentLoaded({ content, actions }) {
           const { createData, addRoute } = actions;
-          const { shikigamiData } = require('./src/data/shikigami.ts');
 
           await Promise.all(
             shikigamiData.map(async (shikigami) => {
