@@ -1,0 +1,5660 @@
+import { Shikigami } from "../types/shikigami";
+
+export const shikigamiData: Shikigami[] = [
+    {
+        id: "taira-no-masakado",
+        name: "Taira no Masakado",
+        rarity: "SSR",
+        role: ["DPS", "Tank"],
+        icon: "/img/shikigami/SSR/taira-no-masakado/icon.png",
+        image: "/img/shikigami/SSR/taira-no-masakado/full.png",
+        bio: "A legendary samurai who rebelled against the imperial court. His spirit, filled with grudge and power, has returned to the world.",
+        stats: {
+            attack: "(SS) 4020",
+            health: "(B) 10254",
+            defense: "(SS) 595",
+            speed: "(S) 116",
+            crit: "10%",
+            critDmg: "160%",
+            effectHit: "0%",
+            effectRes: "0%"
+        },
+        skills: [
+            {
+                name: "Soaring Strike",
+                icon: "/img/shikigami/SSR/taira-no-masakado/skill1.webp",
+                type: "Normal",
+                orbCost: 0,
+                cooldown: 0,
+                description: `<i>Amidst chaos, kneel before me.</i>\nTaira no Masakado attacks a single target dealing damage equal to 100% of his ATK.`,
+                levelUpEffects: [
+                    { level: 2, description: "Damage increases to 105%." },
+                    { level: 3, description: "Damage increases to 110%." },
+                    { level: 4, description: "Damage increases to 115%." },
+                    { level: 5, description: "Damage increases to 125%." },
+                ],
+            },
+            {
+                name: "Time Rift Rotation",
+                icon: "/img/shikigami/SSR/taira-no-masakado/skill2.webp",
+                type: "Active",
+                orbCost: 1,
+                cooldown: 0,
+                description: `<i>The tides of battle turn.</i>\nExclusive effect. At the start of the battle, Taira no Masakado's starting ATK exceeds 700% DEF, enters Offensive Stance; otherwise enters Defensive Stance. Wields artifact Futsunomitama. [Cast] Switches stance.\n\n<b>Offensive Stance (攻击架势)</b> <img src="/img/shikigami/SSR/taira-no-masakado/offensive-stance.webp" style="width: 20px; vertical-align: middle;" />: When casting Eternal Blazing Sun, enhances Futsunomitama once.\n\n<b>Defensive Stance (防守架势)</b> <img src="/img/shikigami/SSR/taira-no-masakado/defensive-stance.webp" style="width: 20px; vertical-align: middle;" />: When attacked, recovers HP equal to 500% of starting DEF (up to 70% of starting ATK) and enhances Futsunomitama once (can be enhanced once per turn).\n\n<b>Futsunomitama</b> <img src="/img/shikigami/SSR/taira-no-masakado/futsunomitama.webp" style="width: 20px; vertical-align: middle;" />: After every 3 enhancements, Taira no Masakado immediately enters Rift in Time.`,
+                levelUpEffects: [
+                    { level: 2, description: "After [[Rift in Time|Traverse in the rupture of time and space where actions are not counted towards a turn and are regarded as outside of the turn.]] ends, reduces own duration of received [[debuffs|Blank for find out text later]] and [[control effects|Freeze, Sleep, Confuse, Taunt, Silence, Bind, Morph, Daze, Provocation, Deep Freeze, Frostbound, Shadowbound, Fettered, Ruined, and Rest in Ice are considered control effects. The final 9 cannot be dispelled. Frostbound cannot be dispelled or removed.]] by 1 turn." },
+                    { level: 3, description: "While in [[Rift in Time|Traverse in the rupture of time and space where actions are not counted towards a turn and are regarded as outside of the turn.]], Eternal Blazing Sun's orb cost is reduced by 2." },
+                    { level: 4, description: "Defensive Stance's [[recover|Different from healing or restoring, cannot Crit, unaffected by reduced healing effects, and does not trigger effects related to healing.]] effect also applies to other allies, with the amount equal to 70% of their own stats (does not trigger when affected by [[transferred damage|One of the types of damage, cannot Crit, is due to some shikigami skills being able to distribute damage, such as Shouzu's link and Ushi no Toki's doll.]])." },
+                    { level: 5, description: "While in Offensive Stance, each time Futsunomitama is enhanced, Eternal Blazing Sun's AoE multiplier increases by 5% (max 15%)." },
+                ],
+            },
+            {
+                name: "Eternal Blazing Sun",
+                icon: "/img/shikigami/SSR/taira-no-masakado/skill3.webp",
+                type: "Active",
+                orbCost: 3,
+                cooldown: 0,
+                description: `<i>Halting the war with my might, no legion's power can compare to mine.</i>\nTaira no Masakado attacks all enemies 3 times, dealing 64% ATK damage each hit. Then he deals ruin damage equal to 18% of total damage dealt to selected enemy. If an enemy is defeated, gains 3 orbs and strengthens Futsunomitama once.\n\n<b>Ruin Damage</b>: One of the types of damage, ignores DEF and damage reduction effects.\n\n<b>Futsunomitama</b> <img src="/img/shikigami/SSR/taira-no-masakado/futsunomitama.webp" style="width: 20px; vertical-align: middle;" />: After every 3 enhancements, Taira no Masakado immediately enters Rift in Time.`,
+                levelUpEffects: [
+                    { level: 2, description: "Increases AoE damage to 68%." },
+                    { level: 3, description: "Increases AoE damage to 72%." },
+                    { level: 4, description: "Increases AoE damage to 76%." },
+                    { level: 5, description: "AoE damage increases to 80%; for each enemy defeated, receives 7% less damage and ruin damage coefficient increases by 5% (up to 5 times)." },
+                ],
+            },
+        ],
+    },
+    {
+        id: "asura",
+        name: "Asura",
+        rarity: "SSR",
+        role: ["DPS"],
+        icon: "/images/shikigami/asura/icon.png",
+        image: "/images/shikigami/asura/full.png",
+        bio: "A god of battle born from the darkness of the abyss. He seeks to destroy the heavens.",
+        stats: {
+            attack: "SS",
+            health: "B",
+            defense: "B",
+            speed: "119",
+            crit: "10%",
+            critDmg: "150%",
+            effectHit: "0%",
+            effectRes: "0%",
+        },
+        skills: [
+            {
+                name: "Lotus Eyes",
+                icon: "",
+                type: "Normal",
+                orbCost: 0,
+                cooldown: 0,
+                description: "Attacks one target dealing 100% damage.",
+                levelUpEffects: [
+                    { level: 2, description: "Damage increased to 105%" },
+                    { level: 5, description: "Damage increased to 125%" },
+                ],
+            },
+            {
+                name: "Demon Eyes",
+                icon: "",
+                type: "Passive",
+                orbCost: 0,
+                cooldown: 0,
+                description: "When Asura kills an enemy, he gains 1 stack of Madness.",
+                levelUpEffects: [],
+            },
+            {
+                name: "Purgatory",
+                icon: "",
+                type: "Active",
+                orbCost: 3,
+                cooldown: 0,
+                description: "Attacks all enemies dealing 315% damage.",
+                levelUpEffects: [
+                    { level: 5, description: "Damage increased to 335%" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "onikiri",
+        name: "Onikiri",
+        rarity: "SSR",
+        role: ["DPS"],
+        icon: "/images/shikigami/onikiri/icon.png",
+        image: "/images/shikigami/onikiri/full.png",
+        bio: "The demon cutter sword of the Minamoto clan.",
+        stats: {
+            attack: "S",
+            health: "C",
+            defense: "C",
+            speed: "117",
+            crit: "11%",
+            critDmg: "150%",
+            effectHit: "0%",
+            effectRes: "0%",
+        },
+        skills: [
+            {
+                name: "Ghost Cut",
+                icon: "",
+                type: "Normal",
+                orbCost: 0,
+                cooldown: 0,
+                description: "Attacks one target dealing 80% damage.",
+                levelUpEffects: [],
+            },
+        ],
+    },
+    {
+        id: "sp-tamamo",
+        name: "Blazing Tamamo",
+        rarity: "SP",
+        role: ["DPS"],
+        icon: "",
+        image: "",
+        bio: "The fox spirit in his prime power.",
+        stats: {
+            attack: "SS",
+            health: "C",
+            defense: "C",
+            speed: "115",
+            crit: "12%",
+            critDmg: "150%",
+            effectHit: "0%",
+            effectRes: "0%",
+        },
+        skills: [],
+    },
+    {
+        id: "yamausagi",
+        name: "Yamausagi",
+        rarity: "R",
+        role: ["Support", "Puller"],
+        icon: "",
+        image: "",
+        bio: "A cute rabbit riding a demon frog.",
+        stats: {
+            attack: "B",
+            health: "B",
+            defense: "B",
+            speed: "115",
+            crit: "0%",
+            critDmg: "150%",
+            effectHit: "0%",
+            effectRes: "0%",
+        },
+        skills: [],
+    },
+
+    {
+        "id": "aoandon-frog",
+        "name": "Aoandon Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "arakawa-frog",
+        "name": "Arakawa Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "enma-frog",
+        "name": "Enma Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "higanbana-frog",
+        "name": "Higanbana Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ibaraki-frog",
+        "name": "Ibaraki Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ichimokuren-frog",
+        "name": "Ichimokuren Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kachou-fuugetsu-frog",
+        "name": "Kachou Fuugetsu Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kaguya-hime-frog",
+        "name": "Kaguya Hime Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "lantern-boy",
+        "name": "Lantern Boy",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "miketsu-frog",
+        "name": "Miketsu Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ootengu-frog",
+        "name": "Ootengu Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ryoumenbotoke-frog",
+        "name": "Ryoumenbotoke Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shishio-frog",
+        "name": "Shishio Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shuten-frog",
+        "name": "Shuten Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "susabi-frog",
+        "name": "Susabi Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tamamo-no-mae-frog",
+        "name": "Tamamo no Mae Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "youtou-hime-frog",
+        "name": "Youtou Hime Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yuki-douji-frog",
+        "name": "Yuki Douji Frog",
+        "rarity": "SSN",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "akashita",
+        "name": "Akashita",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "blue-imp",
+        "name": "Blue Imp",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "daruma",
+        "name": "Daruma",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "grave-digger",
+        "name": "Grave Digger",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "green-imp",
+        "name": "Green Imp",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hahakigami",
+        "name": "Hahakigami",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+
+    {
+        "id": "lantern-soul",
+        "name": "Lantern Soul",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nurikabe",
+        "name": "Nurikabe",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "parasite",
+        "name": "Parasite",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "red-imp",
+        "name": "Red Imp",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "umbrella",
+        "name": "Umbrella",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yellow-imp",
+        "name": "Yellow Imp",
+        "rarity": "N",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "akaname",
+        "name": "Akaname",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ame-onna",
+        "name": "Ame Onna",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "baketanuki",
+        "name": "Baketanuki",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "doujo",
+        "name": "Doujo",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "gaki",
+        "name": "Gaki",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "heiyou",
+        "name": "Heiyou",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hitotsume-kozou",
+        "name": "Hitotsume Kozou",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hotarugusa",
+        "name": "Hotarugusa",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jikikaeru",
+        "name": "Jikikaeru",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "juzu",
+        "name": "Juzu",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kagewani",
+        "name": "Kagewani",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kamikui",
+        "name": "Kamikui",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kappa",
+        "name": "Kappa",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "karasu-tengu",
+        "name": "Karasu Tengu",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kochou-no-sei",
+        "name": "Kochou no Sei",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kodokushi",
+        "name": "Kodokushi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "koi-no-sei",
+        "name": "Koi no Sei",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "korouka",
+        "name": "Korouka",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kosode-no-te",
+        "name": "Kosode no Te",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kubinashi",
+        "name": "Kubinashi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kudagitsune",
+        "name": "Kudagitsune",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyonshii-imouto",
+        "name": "Kyonshii Imouto",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyonshii-inu",
+        "name": "Kyonshii Inu",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyonshii-otouto",
+        "name": "Kyonshii Otouto",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyuumei-neko",
+        "name": "Kyuumei Neko",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "mushishi",
+        "name": "Mushishi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "oguna",
+        "name": "Oguna",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "peach-maki-and-karashi",
+        "name": "Peach Maki & Karashi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "samurai-no-rei",
+        "name": "Samurai no Rei",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "sanbi-no-kitsune",
+        "name": "Sanbi no Kitsune",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "satori",
+        "name": "Satori",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shouzu",
+        "name": "Shouzu",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tenjo-kudari",
+        "name": "Tenjo Kudari",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tesso",
+        "name": "Tesso",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "usagimaru",
+        "name": "Usagimaru",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ushi-no-toki",
+        "name": "Ushi no Toki",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yama-usagi",
+        "name": "Yama Usagi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yamawaro",
+        "name": "Yamawaro",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "zashiki-warashi",
+        "name": "Zashiki Warashi",
+        "rarity": "R",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "amanozako",
+        "name": "Amanozako",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "amezaiku",
+        "name": "Amezaiku",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "aobouzu",
+        "name": "Aobouzu",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "bakekujira",
+        "name": "Bakekujira",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "chin",
+        "name": "Chin",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "doumeki",
+        "name": "Doumeki",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ebisu",
+        "name": "Ebisu",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "enenra",
+        "name": "Enenra",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "futakuchi-onna",
+        "name": "Futakuchi Onna",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "fuuri",
+        "name": "Fuuri",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "garuda",
+        "name": "Garuda",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hako-no-shoujo",
+        "name": "Hako no Shoujo",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hakurou",
+        "name": "Hakurou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hangan",
+        "name": "Hangan",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hannya",
+        "name": "Hannya",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hiyoribou",
+        "name": "Hiyoribou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hone-onna",
+        "name": "Hone Onna",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hoshiguma-douji",
+        "name": "Hoshiguma Douji",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hououka",
+        "name": "Hououka",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "inugami",
+        "name": "Inugami",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "itsumade",
+        "name": "Itsumade",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ittan-momen",
+        "name": "Ittan Momen",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jorougumo",
+        "name": "Jorougumo",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kainin",
+        "name": "Kainin",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kairaishi",
+        "name": "Kairaishi",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kamaitachi",
+        "name": "Kamaitachi",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kamimai",
+        "name": "Kamimai",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kani-hime",
+        "name": "Kani Hime",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kaoru",
+        "name": "Kaoru",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kawazaru",
+        "name": "Kawazaru",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kijo-momiji",
+        "name": "Kijo Momiji",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kingyo-hime",
+        "name": "Kingyo Hime",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kisei",
+        "name": "Kisei",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kiyohime",
+        "name": "Kiyohime",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "komatsumaru",
+        "name": "Komatsumaru",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kujira",
+        "name": "Kujira",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kuro-douji",
+        "name": "Kuro Douji",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kuro-mujou",
+        "name": "Kuro Mujou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyonshii-ani",
+        "name": "Kyonshii Ani",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kyuuketsu-hime",
+        "name": "Kyuuketsu Hime",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "mannendake",
+        "name": "Mannendake",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "miakashi",
+        "name": "Miakashi",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "momo-no-sei",
+        "name": "Momo no Sei",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "mouba",
+        "name": "Mouba",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nekomata",
+        "name": "Nekomata",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ninmenju",
+        "name": "Ninmenju",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nusubitogami",
+        "name": "Nusubitogami",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nyuunai-suzume",
+        "name": "Nyuunai-suzume",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "oitsukigami",
+        "name": "Oitsukigami",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "okikumushi",
+        "name": "Okikumushi",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "okou",
+        "name": "Okou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "okuribito",
+        "name": "Okuribito",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "oshiroi-baba",
+        "name": "Oshiroi Baba",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "rukia-kuchiki",
+        "name": "Rukia Kuchiki",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "sakura-no-sei",
+        "name": "Sakura no Sei",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "sasori-onna",
+        "name": "Sasori Onna",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shiro-douji",
+        "name": "Shiro Douji",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shiro-mujou",
+        "name": "Shiro Mujou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shoyou",
+        "name": "Shoyou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tagitsuhime",
+        "name": "Tagitsuhime",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ubume",
+        "name": "Ubume",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "umi-no-chou",
+        "name": "Umi no Chou",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "umibouzu",
+        "name": "Umibouzu",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yasha",
+        "name": "Yasha",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "youkinshi",
+        "name": "Youkinshi",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "youko",
+        "name": "Youko",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yuki-onna",
+        "name": "Yuki Onna",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yumekui",
+        "name": "Yumekui",
+        "rarity": "SR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "amaterasu",
+        "name": "Amaterasu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "aoandon",
+        "name": "Aoandon",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "arakawa-no-aruji",
+        "name": "Arakawa no Aruji",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "enma",
+        "name": "Enma",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "enmusubi-no-kami",
+        "name": "Enmusubi no Kami",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "fukengaku",
+        "name": "Fukengaku",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "fuuyoukun",
+        "name": "Fuuyoukun",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "gashadokuro",
+        "name": "Gashadokuro",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "gintoki-sakata",
+        "name": "Gintoki Sakata",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hakuzousu",
+        "name": "Hakuzousu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hatsune-miku",
+        "name": "Hatsune Miku",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "higanbana",
+        "name": "Higanbana",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "himiko",
+        "name": "Himiko",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hozuki",
+        "name": "Hozuki",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ibaraki-douji",
+        "name": "Ibaraki Douji",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ichigo-kurosaki",
+        "name": "Ichigo Kurosaki",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ichimokuren",
+        "name": "Ichimokuren",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "inosuke-hashibira",
+        "name": "Inosuke Hashibira",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "inuyasha",
+        "name": "Inuyasha",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "izanami",
+        "name": "Izanami",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jinkougyou",
+        "name": "Jinkougyou",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kachou-fuugetsu",
+        "name": "Kachou Fuugetsu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kagamine-rin-and-len",
+        "name": "Kagamine Rin & Len",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kagura-and-sadaharu",
+        "name": "Kagura & Sadaharu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kaguya-hime",
+        "name": "Kaguya Hime",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "karuta",
+        "name": "Karuta",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kidoumaru",
+        "name": "Kidoumaru",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kikinyou",
+        "name": "Kikinyou",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kikyou",
+        "name": "Kikyou",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kinnara",
+        "name": "Kinnara",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kotodama",
+        "name": "Kotodama",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kujaku-myouou",
+        "name": "Kujaku-Myouou",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kusuriuri",
+        "name": "Kusuriuri",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "magatsugami",
+        "name": "Magatsugami",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "megurine-luka",
+        "name": "Megurine Luka",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "menreiki",
+        "name": "Menreiki",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "miketsu",
+        "name": "Miketsu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "mishige",
+        "name": "Mishige",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "natsume-and-nyanko-sensei",
+        "name": "Natsume & Nyanko-sensei",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nekogawa",
+        "name": "Nekogawa",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nezuko-kamado",
+        "name": "Nezuko Kamado",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "nura-rikuo",
+        "name": "Nura Rikuo",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ootakemaru",
+        "name": "Ootakemaru",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ootengu",
+        "name": "Ootengu",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "orochi",
+        "name": "Orochi",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ryoumenbotoke",
+        "name": "Ryoumenbotoke",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ryukaku",
+        "name": "Ryukaku",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "sakura-kinomoto",
+        "name": "Sakura Kinomoto",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "senhime",
+        "name": "Senhime",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "sesshoumaru",
+        "name": "Sesshoumaru",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shentu-ziye",
+        "name": "Shentu Ziye",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shiki",
+        "name": "Shiki",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shiranui",
+        "name": "Shiranui",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shishio",
+        "name": "Shishio",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shokurei",
+        "name": "Shokurei",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shuten-douji",
+        "name": "Shuten Douji",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "susabi",
+        "name": "Susabi",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "susanoo",
+        "name": "Susanoo",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "suzuhiko-hime",
+        "name": "Suzuhiko Hime",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "suzuka-gozen",
+        "name": "Suzuka Gozen",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "syaoran-li",
+        "name": "Syaoran Li",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "taishakuten",
+        "name": "Taishakuten",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "taki",
+        "name": "Taki",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "takiyasha-hime",
+        "name": "Takiyasha Hime",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tamamo-no-mae",
+        "name": "Tamamo no Mae",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tamatori",
+        "name": "Tamatori",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tanjiro-kamado",
+        "name": "Tanjiro Kamado",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tsukuyomi",
+        "name": "Tsukuyomi",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ungaikyou",
+        "name": "Ungaikyou",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "wenren-yixuan",
+        "name": "Wenren Yixuan",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yamakaze",
+        "name": "Yamakaze",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yato-no-kami",
+        "name": "Yato no Kami",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "youtou-hime",
+        "name": "Youtou Hime",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yuki-douji",
+        "name": "Yuki Douji",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yuki-gozen",
+        "name": "Yuki Gozen",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "zenitsu-agatsuma",
+        "name": "Zenitsu Agatsuma",
+        "rarity": "SSR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "akakage-youtou-hime",
+        "name": "Akakage Youtou Hime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "bakkotsu-kiyohime",
+        "name": "Bakkotsu Kiyohime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "byounen-hotarugusa",
+        "name": "Byounen Hotarugusa",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "daiyamaten-enma",
+        "name": "Daiyamaten Enma",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "eikyo-senhime",
+        "name": "Eikyo Senhime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "gyoujitsu-ebisu",
+        "name": "Gyoujitsu Ebisu",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "gyourou-arakawa-no-aruji",
+        "name": "Gyourou Arakawa no Aruji",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "hatsurei-yamakaze",
+        "name": "Hatsurei Yamakaze",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "honshin-sanbi-no-kitsune",
+        "name": "Honshin Sanbi no Kitsune",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "inaba-kaguya-hime",
+        "name": "Inaba Kaguya Hime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "inari-miketsu",
+        "name": "Inari Miketsu",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jinshin-shishio",
+        "name": "Jinshin Shishio",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jinten-tamamo-no-mae",
+        "name": "Jinten Tamamo no Mae",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "jiyou-takiyasha-hime",
+        "name": "Jiyou Takiyasha Hime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kaisei-kachou-fuugetsu",
+        "name": "Kaisei Kachou Fuugetsu",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kamiochi-orochi",
+        "name": "Kamiochi Orochi",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kokorogari-kijo-momiji",
+        "name": "Kokorogari Kijo Momiji",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "kuusou-menreiki",
+        "name": "Kuusou Menreiki",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "matsuyoi-ubume",
+        "name": "Matsuyoi Ubume",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "mujin-yama-usagi",
+        "name": "Mujin Yama Usagi",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "myoushu-kyuumei-neko",
+        "name": "Myoushu Kyuumei Neko",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "negai-tsumugi-enmusubi-no-kami",
+        "name": "Negai Tsumugi Enmusubi no Kami",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "oniou-shuten-douji",
+        "name": "Oniou Shuten Douji",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "oura-hannya",
+        "name": "Oura Hannya",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "reikai-kingyo-hime",
+        "name": "Reikai Kingyo Hime",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "rengoku-ibaraki-douji",
+        "name": "Rengoku Ibaraki Douji",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "rokumei-ootakemaru",
+        "name": "Rokumei Ootakemaru",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ryougin-suzuka-gozen",
+        "name": "Ryougin Suzuka Gozen",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ryuukou-oitsukigami",
+        "name": "Ryuukou Oitsukigami",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "seishi-hiyoribou",
+        "name": "Seishi Hiyoribou",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "semigoori-yuki-onna",
+        "name": "Semigoori Yuki Onna",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shinjou-hoshiguma-douji",
+        "name": "Shinjou Hoshiguma Douji",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shinkei-susabi",
+        "name": "Shinkei Susabi",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shinyuu-inugami",
+        "name": "Shinyuu Inugami",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shoufuku-zashiki-warashi",
+        "name": "Shoufuku Zashiki Warashi",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shouu-ootengu",
+        "name": "Shouu Ootengu",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "shura-kidoumaru",
+        "name": "Shura Kidoumaru",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "soufuu-ichimokuren",
+        "name": "Soufuu Ichimokuren",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "tenken-jinshin-onikiri",
+        "name": "Tenken Jinshin Onikiri",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "ukiyo-aoandon",
+        "name": "Ukiyo Aoandon",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "unjou-fukengaku",
+        "name": "Unjou Fukengaku",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yomei-higanbana",
+        "name": "Yomei Higanbana",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "younen-enenra",
+        "name": "Younen Enenra",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "youon-kinnara",
+        "name": "Youon Kinnara",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yumebiki-kochou-no-sei",
+        "name": "Yumebiki Kochou no Sei",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "zenshin-ungaikyou",
+        "name": "Zenshin Ungaikyou",
+        "rarity": "SP",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+    {
+        "id": "yotohime",
+        "name": "Yotohime",
+        "rarity": "UR",
+        "role": [],
+        "icon": "",
+        "image": "",
+        "bio": "Bio coming soon...",
+        "stats": {
+            "attack": "B",
+            "health": "B",
+            "defense": "B",
+            "speed": "100",
+            "crit": "0%",
+            "critDmg": "150%",
+            "effectHit": "0%",
+            "effectRes": "0%"
+        },
+        "skills": []
+    }
+    ,
+];
+
+export function getAllShikigami(): Shikigami[] {
+    return shikigamiData;
+}
+
+export function getShikigamiById(id: string): Shikigami | undefined {
+    return shikigamiData.find((s) => s.id === id);
+}
