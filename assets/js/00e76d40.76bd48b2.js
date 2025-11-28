@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkonmyoji_docs=globalThis.webpackChunkonmyoji_docs||[]).push([[1881],{9253:e=>{e.exports=JSON.parse('{"id":"oguna","name":"Oguna","rarity":"R","role":[],"icon":"","image":"","bio":"Bio coming soon...","stats":{"attack":"B","health":"B","defense":"B","speed":"100","crit":"0%","critDmg":"150%","effectHit":"0%","effectRes":"0%"},"skills":[]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkonmyoji_docs=globalThis.webpackChunkonmyoji_docs||[]).push([[857],{6158:s=>{s.exports=JSON.parse('{"name":"docusaurus-shikigami-plugin","id":"default"}')}}]);
